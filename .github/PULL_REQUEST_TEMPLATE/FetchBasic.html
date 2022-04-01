@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="response" style="background-color: blue; color: white">click</button>
+    <div id="data"></div>
+    <script>
+        //query for element
+        const btn = document.getElementById("response");
+        
+        function fetchData() {}{
+            fetch('text.txt')
+            .then((response) => response.text()) 
+            .then((data) => 
+            //console.log(data)
+            document.getElementById("data").innerHTML = data
+            )
+        }
+        btn.addEventListener("click",fetchData);
+    </script>
+</body>
+</html>
